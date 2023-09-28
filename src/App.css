@@ -1,0 +1,321 @@
+:root {
+  --main-background-color: darkred;
+  --main-color: #282c34;
+}
+
+.App {
+  text-align: center;
+  font: 'Century Gothic', Helvetica, Arial, sans-serif;
+}
+
+.App-link {
+  color: var(--main-background-color);
+}
+
+.App-header {
+  background-color: var(--main-color);
+  min-height: calc(30px + 7vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-slogan {							                        /***** Tabla slogan header *****/
+  position: absolute;	
+  margin-left: auto;
+  margin-right: auto;
+  top: -2vh;
+}
+.App-slogan-factura {							                /***** Tabla slogan header factura swalert *****/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.5vh;
+  margin-bottom: -2.5vh;
+}
+
+.App-logo {
+  height: 4vw;
+  pointer-events: none;
+  filter: brightness(200%);
+  filter: drop-shadow(3px 3px 0px #fff); /*** Logo ***/
+}
+
+.App-header h1 {								                /***** Titulo header *****/
+  font: 5vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.25vw;
+  font-size: 3vw;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  position: static;
+}
+.App-header h2 {								                /***** Titulo header *****/
+  font: 4vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5vw;
+  font-size: 2vw;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  position: static;
+}
+.App-header h3 {								                /***** Titulo header *****/
+  font: 4vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5vw;
+  font-size: 2vw;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  position: static;
+}
+
+.App-tablero {
+  position: absolute;
+  left: 2vw;
+  top: -1vh;
+  font-size: calc(10px + 2vmin)
+}
+.App-icono {
+  color: var(--main-background-color);
+  filter: drop-shadow(2px 2px 0px #fff);
+}
+.App-icono-blanco {
+  filter: drop-shadow(2px 2px 0px #000);
+  font-size: 1.5vw;
+}
+
+.App-nav {
+  position: absolute;
+  right: 2vw;
+  top: 2.5vh;
+}
+.App-nav-item {
+  width: 5vw;
+  font-size: 1.5vw;
+  padding: 1.5vh 0 1.5vh 0;
+  background-color: var(--main-background-color);
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.App-body {
+  background-color: var(--main-color);
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1px + 3vmin);
+  color: var(--main-color);
+  background: url("/public/fondo.jpg") no-repeat;
+  background-size: cover;
+}
+
+/********** Home.js **********/
+.divTrailer {
+  position: absolute;
+  margin-left: 0.45vw;
+}
+.divTrailer th {
+  background-color: var(--main-background-color);
+  color: #fff;
+}
+.Trailer-videos {
+
+}
+.divCartelera {
+  position: absolute;
+  margin-left: 29vw;
+  background-color: #fff;
+}
+.divCartelera th {
+  background-color: var(--main-background-color);
+  color: #fff;
+}
+.divCartelera ul {
+  left: -20vw;
+  list-style: none;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0vw;
+  padding-inline-end: 0vw;
+  white-space: nowrap;
+}
+.Cartelera-item {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 3vw;
+  text-align: center;
+}
+.Cartelera-imagen {                     /*** Imagenes cartelera películas ***/
+  width: 5.6vw;
+  pointer-events: none;
+}
+.divSillas{
+  position: absolute;
+  left: 15vw;
+  top: 30vh;
+  display: inline-flex;
+}
+.divDatos{
+  position: absolute;
+  left: 70vw;
+  font-weight: 600;
+}
+.tableDatos {
+  background-color: #fff;
+  width: 28vw;
+}
+.headerDatos {
+  background-color: var(--main-background-color);
+  color: #fff;
+}
+
+input[type='checkbox'] {
+  width: calc(5px + 14vmin);
+  height: calc(5px + 14vmin);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+input[type='checkbox']::after {
+  box-shadow: 0 0 0 3px green;
+  background-image: url("/public/sillaverde.jpg");
+  background-size: contain;
+  width: calc(5px + 14vmin);
+  height: calc(5px + 14vmin);
+  display: inline-block;
+  padding: 0 0 0 0px;
+  text-align: center;
+  font-weight: 600;
+  font-size: calc(2px + 2vmin);
+  background-color: transparent;
+  border: none;
+  content: "Disponible";
+}
+input[type='checkbox']:checked::after  {
+  box-shadow: 0 0 0 3px var(--main-background-color);
+  background-color: var(--main-background-color);
+  background-image: url("/public/sillaroja.jpg");
+  width: calc(5px + 14vmin);
+  height: calc(5px + 14vmin);
+  display: inline-block;
+  padding: 0 0 0 0px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  content: "Vendida";
+}
+.selectorPelicula{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: inherit;
+  font-size: inherit;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--main-color);
+}
+.divDatos button {
+  color: white;
+  background-color: var(--main-background-color);
+  padding: 1vh 0 1vh 0;
+  letter-spacing: 3px;
+  font-size: calc(7px + 2vmin);
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
+}
+
+
+.swal-content {
+  color: var(--main-color);
+}
+.swal-button--confirm {               /* Boton alerta */
+  background: var(--main-background-color)
+}
+
+
+
+/********** Admin.js **********/
+.divCRUD {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--main-color);
+}
+.divCRUD th {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-background-color);
+  color: #fff;
+}
+.CRUD-imagen {                     /*** Imagenes cartelera películas ***/
+  width: 3.7vw;
+  border: 1px solid #000;
+  pointer-events: none;
+  user-select: none;
+  vertical-align: sub;
+}
+.CRUD-boton-upload-img {
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  background-color: var(--main-background-color);
+  padding: 5px 20px 5px 20px;
+  font-size: calc(5px + 2vh);
+  width: 100%;
+  vertical-align: super;
+  cursor: pointer;
+}
+input[type='text'] {
+  text-align: left;
+  font: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0.85vh 0 0.85vh 5px;
+  background-color: #fff;
+  color: var(--main-color);
+}
+input[type='text']:disabled {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0.85vh 0 0.85vh 0;
+  border: 1px solid;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+input[type='time'] {
+  height: 100%;
+  text-align: center;
+  font: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding-left: 1vw;
+  padding-top: 0.25vh;
+  padding-bottom: 0.25vh;
+  background-color: #fff;
+  color: var(--main-color);
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  height: 4vh;
+  padding-top: 0.5vh;
+  font-size: larger;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  background-color: var(--main-color);
+}
+
+.botonCrud {
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  background-color: var(--main-background-color);
+  padding: 5px 20px 5px 20px;
+  font-size: calc(5px + 2vh);
+  width: 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+{
+    "carteleraPeliculas":[
+        {
+            "pelicula":"Spiderman",
+            "sala":1,
+            "hora":"18:00",
+            "poster":"<img src={imagenPelicula1} className='Cartelera-imagen'/>",
+            "trailer":"<video src={trailerPelicula1} poster={imagenPelicula1} autoPlay loop muted controls className='.Trailer-video' width={400} />"
+        },
+        {
+            "pelicula":"Star Wars",
+            "sala":2,
+            "hora":"19:00",
+            "poster":"<img src={imagenPelicula2} className='Cartelera-imagen'/>",
+            "trailer":"<video src={trailerPelicula2} poster={imagenPelicula2} autoPlay loop muted controls className=''.Trailer-video' width={400} />"
+        },
+        {
+            "pelicula":"Toy Story",
+            "sala":3,
+            "hora":"20:00",
+            "poster":"<img src={imagenPelicula3} className='Cartelera-imagen'/>",
+            "trailer":"<video src={trailerPelicula3} poster={imagenPelicula3} autoPlay loop muted controls className='.Trailer-video' width={400} />"
+        }
+    ]
+}
