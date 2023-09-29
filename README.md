@@ -10,7 +10,7 @@
 ***
 
 ### Preview
-![Cine Facturacion](/docs/cine-Facturacion.png)
+![Cine Facturacion](/docs/cine-facturacion.png)
 
 ***
 
@@ -30,6 +30,6 @@ This project consists of the development of a billing application for a cinema
 
 ## License
 
-Hola mundo is [MIT licensed](/docs/LICENSE.txt).
+Cine Facturación is [MIT licensed](/docs/LICENSE.txt).
 
-The Hola mundo documentation (e.g., .md files in the /docs folder) is [Creative Commons licensed](/docs/LICENSE-docs.txt).
+The Cine Facturación documentation (e.g., .md files in the /docs folder) is [Creative Commons licensed](/docs/LICENSE-docs.txt).
