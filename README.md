@@ -10,7 +10,7 @@
 ***
 
 ### Preview
-![Cine Facturacion](/docs/cine-facturacion.png)
+![Preview](/docs/preview.png)
 
 ***
 
