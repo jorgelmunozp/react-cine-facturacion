@@ -113,7 +113,13 @@
 }
 
 .App-content {
+  display: block;
+}
+.App-content-top {
   display: inline-flex;
+}
+.App-content-bottom {
+
 }
 
 /********** Home.js **********/
@@ -124,8 +130,8 @@
   background-color: var(--main-background-color);
   color: var(--white-color);
 }
-video, .Trailer-videos {
-  width: 23vw;
+video {
+  width: 27vw;
 }
 
 .divCartelera {
@@ -158,10 +164,11 @@ video, .Trailer-videos {
 
 .divDatos{
   font-weight: 600;
+  font-size: 3.3vmin;
 }
 .tableDatos {
   background-color: var(--white-color);
-  width: 28vw;
+  width: 100%;
 }
 .headerDatos {
   background-color: var(--main-background-color);
@@ -174,6 +181,7 @@ video, .Trailer-videos {
   top: 35vh;
   display: inline-flex;
   align-items:end;
+  z-index: 1;
 }
 
 input[type='checkbox'] {
@@ -379,16 +387,28 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .App-content {
+
+  }
+  .App-content-top {
     display: inline-block;
+  }
+  .App-content-bottom {
+
   }
 
   /********** Home.js **********/
-  video, .Trailer-videos {
+  video {
     width: 100%;
   }
 
   .divCartelera {
     
+  }
+  .Cartelera-item {
+    font-size: 5.575vw;
+  }
+  .Cartelera-imagen {                     /*** Imagenes cartelera películas ***/
+    width: 10vw;
   }
 
   .divSillas {
