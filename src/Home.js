@@ -62,7 +62,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
     const [lista, setLista] = useState(sillasFactura);        //Lista Sillas seleccionadas
     const Lista = ({lista}) => {                                //Grafica la lista de sillas seleccionadas en el carrito
       return (
-          <ul style={{'listStyle':'none'}}>
+          <ul className='ticketList' >
             {lista.map((item) => {
                 return ( <li key={item}>{item}</li> )
             })}

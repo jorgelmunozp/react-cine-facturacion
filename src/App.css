@@ -174,6 +174,14 @@ video {
   background-color: var(--main-background-color);
   color: var(--white-color);
 }
+.ticketList {
+  list-style: none;
+  display: flex;
+}
+.ticketList li::after {
+  content: ","; /* Insert a comma as content */
+  margin-right: .1em; /* Add margin after the content */
+}
 
 .divSillas{
   position: absolute;
