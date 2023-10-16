@@ -155,7 +155,6 @@ video, .Trailer-videos {
 }
 .divDatos{
   position: absolute;
-  /* left: 70vw; */
   right: 0.5vw;
   font-weight: 600;
 }
@@ -181,12 +180,11 @@ input[type='checkbox']::after {
   background-size: contain;
   width: 14.5vmin;
   height: 14.5vmin;
-  display: inline-block;
+  display: block;
   padding: 0 0 0 0px;
   text-align: center;
   font-weight: 600;
   font-size: 2vmin;
-  /* font-size: calc(2px + 2vmin); */
   background-color: transparent;
   border: none;
   content: "Disponible";
@@ -197,7 +195,7 @@ input[type='checkbox']:checked::after  {
   background-image: url("/public/sillaroja.jpg");
   width: 14.5vmin;
   height: 14.5vmin;
-  display: inline-block;
+  display: block;
   padding: 0 0 0 0px;
   text-align: center;
   background-color: transparent;
