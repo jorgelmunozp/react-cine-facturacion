@@ -189,10 +189,12 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                               <td colSpan={2}>$ {precioboleto}</td>
                               <td>$ {sillasCarrito[sala-1] * precioboleto}</td>
                           </tr>
-                          <tr>
-                              <th colSpan={5}><button onClick={() => setSillas(facturar(tituloHeader,sillas,setSillas,cantidadSillas,setCantidadSillas,sillasCarrito,setSillasCarrito, sillasFactura, setsillasFactura,lista,setLista,Lista,pelicula,sala,horaPelicula,numeroTicket,setNumeroTicket))}><FontAwesomeIcon icon={faWallet} className='App-icono-blanco'/>&nbsp;<FontAwesomeIcon icon={faCaretRight} className='App-icono-blanco'/></button></th>
-                          </tr>  
                         </tbody>
+                        <tfoot>
+                          <tr>
+                              <td colSpan={5}><button onClick={() => setSillas(facturar(tituloHeader,sillas,setSillas,cantidadSillas,setCantidadSillas,sillasCarrito,setSillasCarrito, sillasFactura, setsillasFactura,lista,setLista,Lista,pelicula,sala,horaPelicula,numeroTicket,setNumeroTicket))}><FontAwesomeIcon icon={faWallet} className='App-icono-blanco'/>&nbsp;<FontAwesomeIcon icon={faCaretRight} className='App-icono-blanco'/></button></td>
+                          </tr>  
+                        </tfoot>
                     </table>
                   </div> 
                 </div>       
