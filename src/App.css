@@ -155,7 +155,8 @@ video, .Trailer-videos {
 }
 .divDatos{
   position: absolute;
-  left: 70vw;
+  /* left: 70vw; */
+  right: 0.5vw;
   font-weight: 600;
 }
 .tableDatos {
@@ -342,6 +343,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   /******************************** BODY ********************************/
   .App-body {
     font-size: 2vmin;
+  }
+
+  .divCartelera {
+    position: absolute;
+    margin-left: 26vw;
+    background-color: var(--white-color);
   }
 
   .divSillas {
