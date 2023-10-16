@@ -11,7 +11,7 @@ const Admin = ({peliculas,setPeliculas}) => {
     return (
         <div className="App">
             <div className='divCRUD'>
-                <table>
+                <table className="tableContent">
                    <thead>
                         <tr>
                             <th style={{'width':'8vw'}}>{<FontAwesomeIcon icon={faStore} className='App-icono2'/>} </th>

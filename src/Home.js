@@ -158,7 +158,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                   </table>  
                 </div>
                 <div className='divDatos'>
-                    <table className="tableContent" border='1' className='tableDatos'>
+                    <table className="tableContent tableDatos" border='1'>
                         <thead>
                           <tr>
                               <th colSpan={5} className='headerDatos'><FontAwesomeIcon icon={faShoppingCart} className='App-icono-blanco' style={{'padding':'1vh 0 1vh 0'}}/></th>
