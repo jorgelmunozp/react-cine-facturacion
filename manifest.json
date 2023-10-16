@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cine Facturación",
+  "name": "React Cine Facturación",
   "icons": [
     {
       "src": "favicon.ico",
