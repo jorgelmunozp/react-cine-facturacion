@@ -24,7 +24,7 @@ var horaLocal = date.toLocaleTimeString([], {timeStyle: 'short', hour12: true});
 const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito,setSillasCarrito,cantidadSillas,setCantidadSillas,peliculas,setPeliculas,poster,setPoster}) => {  
 
   const Trailer = () => {                                //Grafica la lista de sillas seleccionadas en el carrito
-          const trailer = <video src={trailerPelicula1} poster={imagenPelicula1} autoPlay loop muted controls className='Trailer-video' />
+          const trailer = <video src={trailerPelicula1} poster={imagenPelicula1} autoPlay loop controls className='Trailer-video' />
           return trailer;
           // return peliculas[0][4];
     };
@@ -112,56 +112,93 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
     
     return (
         <div className="App">
-            <div className="divTrailer">
-              <table border="1">
-                <thead>
-                  <tr>
-                    <th><FontAwesomeIcon icon={faFilm} className='App-icono-blanco'/></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><Trailer /></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="divCartelera">
-              <table border="1">
-                <thead>
-                  <tr>
-                    <th style={{'width':'4.25vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faVideo} className='App-icono-blanco'/>}</th>
-                    <th style={{'width':'12.3vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faFilm} className='App-icono-blanco'/>}</th>
-                    <th style={{'width':'4.5vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faStore} className='App-icono-blanco'/>}</th>
-                    <th style={{'width':'6.5vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faClock} className='App-icono-blanco'/>}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colSpan={5}>
-                      <marquee width="100%" height="50vh" behavior="scroll" direction="up" scrollamount="1" scrolldelay='20' truespeed='true'> 
-                         { peliculas.map(item => (
-                            <>
-                              <tr>
-                                <td className='Cartelera-item Cartelera-imagen'><img src={item[3]} className='Cartelera-imagen' alt=' '/></td>
-                                <td className='Cartelera-item' style={{'padding':'0 0.5vw 0 0.5vw'}}>&nbsp;{item[0]}&nbsp;</td>
-                                <td className='Cartelera-item' style={{'padding':'0 1.5vw 0 1.5vw'}}>&nbsp;{item[1]}&nbsp;</td>
-                                <td className='Cartelera-item'>&nbsp;{item[2]}&nbsp;</td>
-                              </tr> 
-                            </> )) } 
-                      </marquee>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>  
-            </div>
+            <div className="App-content">         
+              <div className="divTrailer">
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <th><FontAwesomeIcon icon={faFilm} className='App-icono-blanco'/></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><Trailer /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="divCartelera">
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <th style={{'width':'4.25vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faVideo} className='App-icono-blanco'/>}</th>
+                      <th style={{'width':'12.3vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faFilm} className='App-icono-blanco'/>}</th>
+                      <th style={{'width':'4.5vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faStore} className='App-icono-blanco'/>}</th>
+                      <th style={{'width':'6.5vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faClock} className='App-icono-blanco'/>}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colSpan={5}>
+                        <marquee width="100%" height="50vh" behavior="scroll" direction="up" scrollamount="1" scrolldelay='20' truespeed='true'> 
+                          { peliculas.map(item => (
+                              <>
+                                <tr>
+                                  <td className='Cartelera-item Cartelera-imagen'><img src={item[3]} className='Cartelera-imagen' alt=' '/></td>
+                                  <td className='Cartelera-item' style={{'padding':'0 0.5vw 0 0.5vw'}}>&nbsp;{item[0]}&nbsp;</td>
+                                  <td className='Cartelera-item' style={{'padding':'0 1.5vw 0 1.5vw'}}>&nbsp;{item[1]}&nbsp;</td>
+                                  <td className='Cartelera-item'>&nbsp;{item[2]}&nbsp;</td>
+                                </tr> 
+                              </> )) } 
+                        </marquee>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>  
+              </div>
 
+              <div className='divDatos'>
+                  <table border='1' className='tableDatos'>
+                      <thead>
+                        <tr>
+                            <th colSpan={5} className='headerDatos'><FontAwesomeIcon icon={faShoppingCart} className='App-icono-blanco' style={{'padding':'1vh 0 1vh 0'}}/></th>
+                        </tr>
+                        <tr className='headerDatos'>
+                            <th colSpan={2}><FontAwesomeIcon icon={faVideo} className='App-icono-blanco'/></th>
+                            <th><FontAwesomeIcon icon={faStore} className='App-icono-blanco'/></th>
+                            <th><FontAwesomeIcon icon={faCalendarAlt} className='App-icono-blanco'/></th>
+                            <th><FontAwesomeIcon icon={faClock} className='App-icono-blanco'/></th>
+                        </tr>
+                        <tr>
+                            <td colSpan={2}><select onChange={(e) => {selectorPelicula(e);setSala(sala)}} className="selectorPelicula" defaultValue={'0'} value={sala-1}>{Add.map((peliculas, sala) => <option key={sala} value={sala}>{peliculas}</option>)}</select></td>
+                            <td><select onChange={(e) => selectorPelicula(e)} className="selectorPelicula" defaultValue={sala-1} value={sala-1}>{Add.map((peliculas, sala) => <option key={sala} value={sala}>{sala+1}</option>)}</select></td>
+                            <td>{fecha}</td>
+                            <td>{horaPelicula}</td>
+                        </tr>  
+                        <tr className='headerDatos'>
+                            <th><FontAwesomeIcon icon={faCouch} className='App-icono-blanco'/></th>  
+                            <th><FontAwesomeIcon icon={faTicketAlt} className='App-icono-blanco'/></th>  
+                            <th colSpan={2}><FontAwesomeIcon icon={faMoneyBillAlt} className='App-icono-blanco'/></th>  
+                            <th><FontAwesomeIcon icon={faDollarSign} className='App-icono-blanco'/></th>  
+                        </tr>  
+                      </thead>  
+                      <tbody>
+                        <tr>
+                            <td><Lista lista={lista}/></td>
+                            <td>{sillasCarrito[sala-1]}</td>
+                            <td colSpan={2}>$ {precioboleto}</td>
+                            <td>$ {sillasCarrito[sala-1] * precioboleto}</td>
+                        </tr>
+                        <tr>
+                            <th colSpan={5}><button onClick={() => setSillas(facturar(tituloHeader,sillas,setSillas,cantidadSillas,setCantidadSillas,sillasCarrito,setSillasCarrito, sillasFactura, setsillasFactura,lista,setLista,Lista,pelicula,sala,horaPelicula,numeroTicket,setNumeroTicket))}><FontAwesomeIcon icon={faWallet} className='App-icono-blanco'/>&nbsp;<FontAwesomeIcon icon={faCaretRight} className='App-icono-blanco'/></button></th>
+                        </tr>  
+                      </tbody>
+                  </table>
+              </div> 
+            </div>
             <div className='divSillas'>
                 <table id='sillasIzquierda'>
                     <thead>
-                    <tr><th>&nbsp;</th></tr>
-                    <tr><th>&nbsp;</th></tr>
-                    <tr><th>&nbsp;</th></tr>
                     <tr>
                         <th></th>  
                         <th>1</th>  
@@ -219,9 +256,6 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                 &nbsp;&nbsp;
                 <table id='sillasDerecha'>
                     <thead>
-                    <tr><th>&nbsp;</th></tr>
-                    <tr><th>&nbsp;</th></tr>
-                    <tr><th>&nbsp;</th></tr>
                     <tr>
                         <th></th>  
                         <th>3</th>  
@@ -242,45 +276,6 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                     </tbody>
                 </table>
             </div>
-
-            <div className='divDatos'>
-                <table border='1' className='tableDatos'>
-                    <thead>
-                      <tr>
-                          <th colSpan={5} className='headerDatos'><FontAwesomeIcon icon={faShoppingCart} className='App-icono-blanco' style={{'padding':'1vh 0 1vh 0'}}/></th>
-                      </tr>
-                      <tr className='headerDatos'>
-                          <th colSpan={2}><FontAwesomeIcon icon={faVideo} className='App-icono-blanco'/></th>
-                          <th><FontAwesomeIcon icon={faStore} className='App-icono-blanco'/></th>
-                          <th><FontAwesomeIcon icon={faCalendarAlt} className='App-icono-blanco'/></th>
-                          <th><FontAwesomeIcon icon={faClock} className='App-icono-blanco'/></th>
-                      </tr>
-                      <tr>
-                          <td colSpan={2}><select onChange={(e) => {selectorPelicula(e);setSala(sala)}} className="selectorPelicula" defaultValue={'0'} value={sala-1}>{Add.map((peliculas, sala) => <option key={sala} value={sala}>{peliculas}</option>)}</select></td>
-                          <td><select onChange={(e) => selectorPelicula(e)} className="selectorPelicula" defaultValue={sala-1} value={sala-1}>{Add.map((peliculas, sala) => <option key={sala} value={sala}>{sala+1}</option>)}</select></td>
-                          <td>{fecha}</td>
-                          <td>{horaPelicula}</td>
-                      </tr>  
-                      <tr className='headerDatos'>
-                          <th><FontAwesomeIcon icon={faCouch} className='App-icono-blanco'/></th>  
-                          <th><FontAwesomeIcon icon={faTicketAlt} className='App-icono-blanco'/></th>  
-                          <th colSpan={2}><FontAwesomeIcon icon={faMoneyBillAlt} className='App-icono-blanco'/></th>  
-                          <th><FontAwesomeIcon icon={faDollarSign} className='App-icono-blanco'/></th>  
-                      </tr>  
-                    </thead>  
-                    <tbody>
-                      <tr>
-                          <td><Lista lista={lista}/></td>
-                          <td>{sillasCarrito[sala-1]}</td>
-                          <td colSpan={2}>$ {precioboleto}</td>
-                          <td>$ {sillasCarrito[sala-1] * precioboleto}</td>
-                      </tr>
-                      <tr>
-                          <th colSpan={5}><button onClick={() => setSillas(facturar(tituloHeader,sillas,setSillas,cantidadSillas,setCantidadSillas,sillasCarrito,setSillasCarrito, sillasFactura, setsillasFactura,lista,setLista,Lista,pelicula,sala,horaPelicula,numeroTicket,setNumeroTicket))}><FontAwesomeIcon icon={faWallet} className='App-icono-blanco'/>&nbsp;<FontAwesomeIcon icon={faCaretRight} className='App-icono-blanco'/></button></th>
-                      </tr>  
-                    </tbody>
-                </table>
-            </div> 
         </div>
     )
 }

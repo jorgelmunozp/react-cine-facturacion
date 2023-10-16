@@ -2,9 +2,9 @@
   --main-background-color: darkred;
   --main-color: #282c34;
   --white-color: #fff;
-  --text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  --text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   --drop-shadow-black: drop-shadow(2px 2px 2px #000);
-  --drop-shadow-white: drop-shadow(2px 2px 0px #fff);
+  --drop-shadow-white: drop-shadow(1.5px 1.5px 0px #fff);
 }
 
 .App {
@@ -40,6 +40,12 @@
   height: 4vw;
   pointer-events: none;
   filter: brightness(200%);
+  filter: drop-shadow(3px 3px 1px #fff);        /*** Logo ***/
+}
+.App-slogan-factura .App-logo {
+  height: 10vw;
+  pointer-events: none;
+  filter: brightness(200%);
   filter: drop-shadow(3px 3px 0px #fff);        /*** Logo ***/
 }
 .App-header h1 {								                  /***** Titulo header *****/
@@ -70,7 +76,7 @@
 .App-tablero {
   position: absolute;
   left: 2vw;
-  font-size: calc(10px + 2vmin)
+  font-size: 2vmin
 }
 .App-icono {
   color: var(--main-background-color);
@@ -106,10 +112,13 @@
   background-size: cover;
 }
 
+.App-content {
+  display: inline-flex;
+}
+
 /********** Home.js **********/
 .divTrailer {
-  position: absolute;
-  margin-left: 0.45vw;
+
 }
 .divTrailer th {
   background-color: var(--main-background-color);
@@ -118,9 +127,8 @@
 video, .Trailer-videos {
   width: 23vw;
 }
+
 .divCartelera {
-  position: absolute;
-  margin-left: 29vw;
   background-color: var(--white-color);
 }
 .divCartelera th {
@@ -147,15 +155,8 @@ video, .Trailer-videos {
   width: 5.6vw;
   pointer-events: none;
 }
-.divSillas{
-  position: absolute;
-  left: 15vw;
-  top: 30vh;
-  display: inline-flex;
-}
+
 .divDatos{
-  position: absolute;
-  right: 0.5vw;
   font-weight: 600;
 }
 .tableDatos {
@@ -165,6 +166,14 @@ video, .Trailer-videos {
 .headerDatos {
   background-color: var(--main-background-color);
   color: var(--white-color);
+}
+
+.divSillas{
+  position: absolute;
+  left: 15vw;
+  top: 35vh;
+  display: inline-flex;
+  align-items:end;
 }
 
 input[type='checkbox'] {
@@ -338,20 +347,53 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /******************************** CELL PHONES  ********************************/
 @media screen and (max-width: 640px) {
-  /******************************** BODY ********************************/
+  /******************************** Header ********************************/
+  .App-logo {
+    height: 8vw;
+    filter: drop-shadow(1px 1px 1px #fff);        /*** Logo ***/
+  }
+  .App-header h1 {
+    letter-spacing: 0.25vw;
+    font-size: 4vmin;
+    text-shadow: var(--text-shadow);
+  }
+  .App-header h3 {								                /***** Titulo header *****/
+    letter-spacing: 0vw;
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  }
+  .App-icono {
+    font-size: 4vw;
+  }
+  .App-icono-blanco {
+    font-size: 2vw;
+  }
+  .App-nav-item {
+    width: 15vw;
+    font-size: 3vw;
+    padding: 1vh 0 1vh 0;
+  }
+  /******************************** Body ********************************/
   .App-body {
     font-size: 2vmin;
   }
 
+  .App-content {
+    display: inline-block;
+  }
+
+  /********** Home.js **********/
+  video, .Trailer-videos {
+    width: 100%;
+  }
+
   .divCartelera {
-    position: absolute;
-    margin-left: 26vw;
-    background-color: var(--white-color);
+    
   }
 
   .divSillas {
     left: 10vw;
-    top: 15vh;
+    top: 70vh;
     display: inline-block;
   }
 }
