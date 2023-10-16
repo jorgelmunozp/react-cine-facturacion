@@ -1,4 +1,5 @@
 :root {
+  --lightgray-color: #bbb;
   --main-background-color: darkred;
   --main-color: #282c34;
   --white-color: #fff;
@@ -119,12 +120,14 @@
   display: inline-flex;
 }
 .App-content-bottom {
-
+  display: inline-flex;
 }
-
+.tableContent {
+  width: 100%;
+}
 /********** Home.js **********/
 .divTrailer {
-  width: 100%;
+  
 }
 .divTrailer th {
   background-color: var(--main-background-color);
@@ -283,16 +286,16 @@ input[type='checkbox']:checked::after  {
   border: 1px solid #000;
   pointer-events: none;
   user-select: none;
-  vertical-align: sub;
+  vertical-align: middle;
 }
 .CRUD-boton-upload-img {
   color: var(--white-color);
   text-shadow: var(--text-shadow);
   background-color: var(--main-background-color);
-  padding: 5px 20px 5px 20px;
-  font-size: calc(5px + 2vh);
+  padding: 1vh 2vw 1vh 2vw;
+  font-size: 3vmin;;
   width: 100%;
-  vertical-align: super;
+  vertical-align: middle;
   cursor: pointer;
 }
 input[type='text'] {
@@ -300,7 +303,7 @@ input[type='text'] {
   font: inherit;
   font-size: inherit;
   font-weight: 600;
-  padding: 0.85vh 0 0.85vh 5px;
+  padding: 1vh 0 1vh 5px;
   background-color: var(--white-color);
   color: var(--main-color);
 }
@@ -309,7 +312,7 @@ input[type='text']:disabled {
   width: 100%;
   text-align: center;
   font: inherit;
-  font-size: inherit;
+  font-size: 3vmin;
   font-weight: 600;
   padding: 0.85vh 0 0.85vh 0;
   border: 1px solid;
@@ -331,19 +334,21 @@ input[type='time'] {
   color: var(--main-color);
 }
 input[type="time"]::-webkit-calendar-picker-indicator {
-  height: 4vh;
-  padding-top: 0.5vh;
+  height: 3.75vh;
+  padding-top: 0.75vh;
+  padding-bottom: 0.25vh;
   font-size: larger;
   text-shadow: var(--text-shadow);
-  background-color: var(--main-color);
+  background-color: var(--lightgray-color);
+  color: var(--white-color);
 }
 
 .botonCrud {
   color: var(--white-color);
   text-shadow: var(--text-shadow);
   background-color: var(--main-background-color);
-  padding: 5px 20px 5px 20px;
-  font-size: calc(5px + 2vh);
+  padding: 1vh 2vw 1vh 2vw;
+  font-size: 3vmin;
   width: 100%;
   cursor: pointer;
 }
@@ -352,7 +357,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 
-
+/*****************************************************************************************/
 /***************************************** MOVIL *****************************************/
 @media (orientation: landscape) {
 
@@ -377,7 +382,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-size: 4vmin;
     text-shadow: var(--text-shadow);
   }
-  .App-header h3 {								                /***** Titulo header *****/
+  .App-header h3 {								                  /***** Titulo header *****/
     letter-spacing: 0vw;
     font-size: 3vw;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
@@ -397,15 +402,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .App-body {
     font-size: 2vmin;
   }
-
-  .App-content {
-
-  }
   .App-content-top {
     display: inline-block;
-  }
-  .App-content-bottom {
-
   }
 
   /********** Home.js **********/
@@ -413,19 +411,57 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     width: 100%;
   }
 
-  .divCartelera {
-    
-  }
   .Cartelera-item {
     font-size: 5.575vw;
   }
-  .Cartelera-imagen {                     /*** Imagenes cartelera películas ***/
+  .Cartelera-imagen {                             /*** Imagenes cartelera películas ***/
     width: 10vw;
   }
 
   .divSillas {
     left: 10vw;
-    top: 72.5vh;
+    top: 80vh;
     display: inline-block;
+  }
+
+  /********** Admin.js **********/
+  .divCRUD {
+    display: inline-flex;
+  }
+
+  .CRUD-imagen {                     /*** Imagenes cartelera películas ***/
+    width: 9vw;
+    vertical-align: middle;
+  }
+  .CRUD-boton-upload-img {
+    padding: 1vh 2vw 1vh 2vw;
+    font-size: 3vmin;
+    vertical-align: middle;
+  }
+  input[type='text'] {
+    font-size: inherit;
+  }
+  input[type='text']:disabled {
+    font-size: 4vmin;
+  }
+  input[type='time'] {
+    height: 100%;
+    font: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    padding-left: 1vw;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
+  }
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    height: 2.1vh;
+
+    font-size: larger;
+  }
+
+  .botonCrud {
+    padding: 1vh 2vw 1vh 2vw;
+    font-size: 3vmin;;
+    width: 100%;
   }
 }

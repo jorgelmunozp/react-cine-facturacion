@@ -115,7 +115,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
             <div className="App-content">
               <div className="App-content-top">
                 <div className="divTrailer">
-                  <table border="1">
+                  <table className="tableContent" border="1">
                     <thead>
                       <tr>
                         <th><FontAwesomeIcon icon={faFilm} className='App-icono-blanco'/></th>
@@ -129,7 +129,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                   </table>
                 </div>
                 <div className="divCartelera">
-                  <table border="1">
+                  <table className="tableContent" border="1">
                     <thead>
                       <tr>
                         <th style={{'width':'4.25vw','textAlign':'center'}}>{<FontAwesomeIcon icon={faVideo} className='App-icono-blanco'/>}</th>
@@ -158,7 +158,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                   </table>  
                 </div>
                 <div className='divDatos'>
-                    <table border='1' className='tableDatos'>
+                    <table className="tableContent" border='1' className='tableDatos'>
                         <thead>
                           <tr>
                               <th colSpan={5} className='headerDatos'><FontAwesomeIcon icon={faShoppingCart} className='App-icono-blanco' style={{'padding':'1vh 0 1vh 0'}}/></th>
