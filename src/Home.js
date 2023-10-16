@@ -24,9 +24,9 @@ var horaLocal = date.toLocaleTimeString([], {timeStyle: 'short', hour12: true});
 const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito,setSillasCarrito,cantidadSillas,setCantidadSillas,peliculas,setPeliculas,poster,setPoster}) => {  
 
   const Trailer = () => {                                //Grafica la lista de sillas seleccionadas en el carrito
-          const trailer = <video src={trailerPelicula1} poster={imagenPelicula1} autoPlay loop muted controls className='.Trailer-video' width={380} height={190} />
-           return trailer;
-          return peliculas[0][4];
+          const trailer = <video src={trailerPelicula1} poster={imagenPelicula1} autoPlay loop muted controls className='Trailer-video' />
+          return trailer;
+          // return peliculas[0][4];
     };
 
 
@@ -143,7 +143,7 @@ const Home = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
                          { peliculas.map(item => (
                             <>
                               <tr>
-                                <td className='Cartelera-item Cartelera-imagen'><img src={item[3]} className='Cartelera-imagen'/></td>
+                                <td className='Cartelera-item Cartelera-imagen'><img src={item[3]} className='Cartelera-imagen' alt=' '/></td>
                                 <td className='Cartelera-item' style={{'padding':'0 0.5vw 0 0.5vw'}}>&nbsp;{item[0]}&nbsp;</td>
                                 <td className='Cartelera-item' style={{'padding':'0 1.5vw 0 1.5vw'}}>&nbsp;{item[1]}&nbsp;</td>
                                 <td className='Cartelera-item'>&nbsp;{item[2]}&nbsp;</td>
@@ -323,7 +323,7 @@ function checkSilla(checked,silla,sillas,setsillas,fil,col,sala,checkedsilla,set
         <div>
           <table className='App-slogan-factura'>
             <tr>
-              <td><img src={logo} className="App-logo"/></td>
+              <td><img src={logo} className="App-logo" alt=' '/></td>
               <td><h1>{tituloHeader}</h1></td>
             </tr>
           </table>

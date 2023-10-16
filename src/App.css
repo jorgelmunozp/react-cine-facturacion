@@ -1,32 +1,34 @@
 :root {
   --main-background-color: darkred;
   --main-color: #282c34;
+  --white-color: #fff;
+  --text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  --drop-shadow-black: drop-shadow(2px 2px 2px #000);
+  --drop-shadow-white: drop-shadow(2px 2px 0px #fff);
 }
 
 .App {
   text-align: center;
-  font: 'Century Gothic', Helvetica, Arial, sans-serif;
+  font: 'Century Gothic', Arial, sans-serif;
 }
-
 .App-link {
   color: var(--main-background-color);
 }
 
+/******************************** HEADER ********************************/
 .App-header {
   background-color: var(--main-color);
-  min-height: calc(30px + 7vh);
+  min-height: 9vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white-color);
 }
-
 .App-slogan {							                        /***** Tabla slogan header *****/
   position: absolute;	
   margin-left: auto;
   margin-right: auto;
-  top: -2vh;
 }
 .App-slogan-factura {							                /***** Tabla slogan header factura swalert *****/
   margin-left: auto;
@@ -34,74 +36,71 @@
   margin-top: -2.5vh;
   margin-bottom: -2.5vh;
 }
-
 .App-logo {
   height: 4vw;
   pointer-events: none;
   filter: brightness(200%);
-  filter: drop-shadow(3px 3px 0px #fff); /*** Logo ***/
+  filter: drop-shadow(3px 3px 0px #fff);        /*** Logo ***/
 }
-
-.App-header h1 {								                /***** Titulo header *****/
-  font: 5vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+.App-header h1 {								                  /***** Titulo header *****/
+  font: 5vmin 'Century Gothic', Arial, sans-serif;
   letter-spacing: 0.25vw;
   font-size: 3vw;
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
   position: static;
 }
 .App-header h2 {								                /***** Titulo header *****/
-  font: 4vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+  font: 4vmin 'Century Gothic', Arial, sans-serif;
   letter-spacing: 0.5vw;
   font-size: 2vw;
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
   position: static;
 }
 .App-header h3 {								                /***** Titulo header *****/
-  font: 4vmin 'Century Gothic', Helvetica, Arial, sans-serif;
+  font: 4vmin 'Century Gothic', Arial, sans-serif;
   letter-spacing: 0.5vw;
   font-size: 2vw;
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
   position: static;
 }
 
 .App-tablero {
   position: absolute;
   left: 2vw;
-  top: -1vh;
   font-size: calc(10px + 2vmin)
 }
 .App-icono {
   color: var(--main-background-color);
-  filter: drop-shadow(2px 2px 0px #fff);
+  filter: var(--drop-shadow-white);
 }
 .App-icono-blanco {
-  filter: drop-shadow(2px 2px 0px #000);
+  filter: var(--drop-shadow-black);
   font-size: 1.5vw;
 }
 
 .App-nav {
   position: absolute;
   right: 2vw;
-  top: 2.5vh;
 }
 .App-nav-item {
   width: 5vw;
   font-size: 1.5vw;
   padding: 1.5vh 0 1.5vh 0;
   background-color: var(--main-background-color);
-  color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
 }
 
+/******************************** BODY ********************************/
 .App-body {
   background-color: var(--main-color);
   min-height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(1px + 3vmin);
+  font-size: 2.5vmin;
   color: var(--main-color);
   background: url("/public/fondo.jpg") no-repeat;
   background-size: cover;
@@ -114,19 +113,19 @@
 }
 .divTrailer th {
   background-color: var(--main-background-color);
-  color: #fff;
+  color: var(--white-color);
 }
-.Trailer-videos {
-
+video, .Trailer-videos {
+  width: 23vw;
 }
 .divCartelera {
   position: absolute;
   margin-left: 29vw;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 .divCartelera th {
   background-color: var(--main-background-color);
-  color: #fff;
+  color: var(--white-color);
 }
 .divCartelera ul {
   left: -20vw;
@@ -141,7 +140,7 @@
 .Cartelera-item {
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: center;
 }
 .Cartelera-imagen {                     /*** Imagenes cartelera películas ***/
@@ -160,17 +159,17 @@
   font-weight: 600;
 }
 .tableDatos {
-  background-color: #fff;
+  background-color: var(--white-color);
   width: 28vw;
 }
 .headerDatos {
   background-color: var(--main-background-color);
-  color: #fff;
+  color: var(--white-color);
 }
 
 input[type='checkbox'] {
-  width: calc(5px + 14vmin);
-  height: calc(5px + 14vmin);
+  width: 14.5vmin;
+  height: 14.5vmin;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -179,13 +178,14 @@ input[type='checkbox']::after {
   box-shadow: 0 0 0 3px green;
   background-image: url("/public/sillaverde.jpg");
   background-size: contain;
-  width: calc(5px + 14vmin);
-  height: calc(5px + 14vmin);
+  width: 14.5vmin;
+  height: 14.5vmin;
   display: inline-block;
   padding: 0 0 0 0px;
   text-align: center;
   font-weight: 600;
-  font-size: calc(2px + 2vmin);
+  font-size: 2vmin;
+  /* font-size: calc(2px + 2vmin); */
   background-color: transparent;
   border: none;
   content: "Disponible";
@@ -194,8 +194,8 @@ input[type='checkbox']:checked::after  {
   box-shadow: 0 0 0 3px var(--main-background-color);
   background-color: var(--main-background-color);
   background-image: url("/public/sillaroja.jpg");
-  width: calc(5px + 14vmin);
-  height: calc(5px + 14vmin);
+  width: 14.5vmin;
+  height: 14.5vmin;
   display: inline-block;
   padding: 0 0 0 0px;
   text-align: center;
@@ -212,11 +212,11 @@ input[type='checkbox']:checked::after  {
   letter-spacing: 0.5px;
   border: none;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--white-color);
   color: var(--main-color);
 }
 .divDatos button {
-  color: white;
+  color: var(--white-color);
   background-color: var(--main-background-color);
   padding: 1vh 0 1vh 0;
   letter-spacing: 3px;
@@ -224,8 +224,8 @@ input[type='checkbox']:checked::after  {
   font-weight: bold;
   width: 100%;
   cursor: pointer;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
+  text-shadow: var(--text-shadow);
+  filter: drop-shadow(var(--text-shadow));
 }
 
 
@@ -248,7 +248,7 @@ input[type='checkbox']:checked::after  {
 .divCRUD th {
   border: 1px solid var(--main-color);
   background-color: var(--main-background-color);
-  color: #fff;
+  color: var(--white-color);
 }
 .CRUD-imagen {                     /*** Imagenes cartelera películas ***/
   width: 3.7vw;
@@ -258,8 +258,8 @@ input[type='checkbox']:checked::after  {
   vertical-align: sub;
 }
 .CRUD-boton-upload-img {
-  color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
   background-color: var(--main-background-color);
   padding: 5px 20px 5px 20px;
   font-size: calc(5px + 2vh);
@@ -273,7 +273,7 @@ input[type='text'] {
   font-size: inherit;
   font-weight: 600;
   padding: 0.85vh 0 0.85vh 5px;
-  background-color: #fff;
+  background-color: var(--white-color);
   color: var(--main-color);
 }
 input[type='text']:disabled {
@@ -286,7 +286,7 @@ input[type='text']:disabled {
   padding: 0.85vh 0 0.85vh 0;
   border: 1px solid;
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
 }
 input[type='time'] {
@@ -299,23 +299,54 @@ input[type='time'] {
   padding-left: 1vw;
   padding-top: 0.25vh;
   padding-bottom: 0.25vh;
-  background-color: #fff;
+  background-color: var(--white-color);
   color: var(--main-color);
 }
 input[type="time"]::-webkit-calendar-picker-indicator {
   height: 4vh;
   padding-top: 0.5vh;
   font-size: larger;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  text-shadow: var(--text-shadow);
   background-color: var(--main-color);
 }
 
 .botonCrud {
-  color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
   background-color: var(--main-background-color);
   padding: 5px 20px 5px 20px;
   font-size: calc(5px + 2vh);
   width: 100%;
   cursor: pointer;
+}
+
+
+
+
+
+
+/***************************************** MOVIL *****************************************/
+@media (orientation: landscape) {
+
+}
+@media (orientation: portrait) {
+
+}
+/******************************** TABLETS ********************************/
+@media screen and (max-width: 1200px) {
+
+}
+
+/******************************** CELL PHONES  ********************************/
+@media screen and (max-width: 640px) {
+  /******************************** BODY ********************************/
+  .App-body {
+    font-size: 2vmin;
+  }
+
+  .divSillas {
+    left: 10vw;
+    top: 15vh;
+    display: inline-block;
+  }
 }

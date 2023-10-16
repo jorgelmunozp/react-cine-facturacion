@@ -25,7 +25,7 @@ const Admin = ({peliculas,setPeliculas}) => {
                         {peliculas.map((item,id) => (
                             <tr>
                                 <td><input id={'sala'+id} type='text' value={peliculas[id][1]} autoComplete='off' disabled/> </td>
-                                <td><img src={peliculas[id][3]} className='CRUD-imagen'/>&nbsp;
+                                <td><img src={peliculas[id][3]} className='CRUD-imagen' alt=' '/>&nbsp;
                                     <label htmlFor={'myfile'+id} className='CRUD-boton-upload-img'><FontAwesomeIcon icon={faCloudUploadAlt} className='App-icono2'/></label>
                                     <input type='file' id={'myfile'+id} name="myfile" style={{'display':'none'}}></input> </td>
                                 <td><input id={'pelicula'+id} type='text' defaultValue={peliculas[id][0]} autoComplete='off'/> </td>
@@ -53,7 +53,7 @@ function actualizar(peliculas,setPeliculas,id) {
     setPeliculas(peliculas);
     swalert(
         <div>
-          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} />
+          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} alt=' ' />
           <h1 style={{'marginTop':'-70px','marginLeft':'70px'}}> Cine </h1>
           <hr></hr>
           <h3> Actualización de cartelera:</h3>
@@ -87,7 +87,7 @@ function actualizarTodo(peliculas,setPeliculas) {
     setPeliculas(peliculas);
     swalert(
         <div>
-          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} />
+          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} alt=' ' />
           <h1 style={{'marginTop':'-70px','marginLeft':'70px'}}> Cine </h1>
           <hr></hr>
           <h3> Actualización de cartelera:</h3>
@@ -98,7 +98,7 @@ function actualizarTodo(peliculas,setPeliculas) {
 function borrar(peliculas,setPeliculas,id) {
     swalert(
         <div>
-          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} />
+          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} alt=' ' />
           <h1 style={{'marginTop':'-70px','marginLeft':'70px'}}> Cine </h1>
           <hr></hr>
           <h3> Película eliminada:</h3>
@@ -138,7 +138,7 @@ function borrarTodo(peliculas,setPeliculas) {
     
     swalert(
         <div>
-          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} />
+          <img src={logo} style={{'height':'10vmin','marginLeft':'-120px'}} alt=' ' />
           <h1 style={{'marginTop':'-70px','marginLeft':'70px'}}> Cine </h1>
           <hr></hr>
           <h3> Películas eliminadas:</h3>

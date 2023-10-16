@@ -15,19 +15,18 @@ const tituloHeader = 'Cine';
 const menuOpcion = 1;
 const sillastotal = [20,20,20];
 
-let carteleraPeliculas = Object.entries(carteleraPeliculasBD);  // Object.entries convierte tanto clave y valor. Cada par es convertido a un arreglo
+let carteleraPeliculas = Object.entries(carteleraPeliculasBD);            // Object.entries convierte tanto clave y valor. Cada par es convertido a un arreglo
 
 
 function App() {
   const [menu, setMenu] = useState(menuOpcion);
-  const [peliculas, setPeliculas] = useState(carteleraPeliculas[0][1]);  //Selector de películas
+  const [peliculas, setPeliculas] = useState(carteleraPeliculas[0][1]);   //Selector de películas
   let [pelicula, setPelicula] = useState(peliculas[0][0]);               
   let [sala, setSala] = useState(peliculas[0][1]);
   let [poster, setPoster] = useState(peliculas[0][3]);
 
   let [cantidadSillas, setCantidadSillas] = useState(sillastotal);
-  let [sillasCarrito, setSillasCarrito] = useState([0,0,0]);  //Carrito de compras (3 carros, 1 por cada sala - 3 salas)
-
+  let [sillasCarrito, setSillasCarrito] = useState([0,0,0]);              //Carrito de compras (3 carros, 1 por cada sala - 3 salas)
   
   return (
     <div className="App">
@@ -45,10 +44,10 @@ function App() {
             <tr>
               <td><h3><FontAwesomeIcon icon={faStore} className='App-icono'/></h3></td>
               <td><h3>{sala}</h3></td>
-              <td>&nbsp;&nbsp;&nbsp;</td>
+              <td>&nbsp;</td>
               <td><h3><FontAwesomeIcon icon={faCouch} className='App-icono'/></h3></td>
               <td><h3>{cantidadSillas[sala-1]}</h3></td>
-              <td>&nbsp;&nbsp;&nbsp;</td>
+              <td>&nbsp;</td>
               <td><h3><FontAwesomeIcon icon={faShoppingCart} className='App-icono'/></h3></td>
               <td><h3>{sillasCarrito[sala-1]}</h3></td>
             </tr>
@@ -76,9 +75,7 @@ const Menu = ({tituloHeader,menu,pelicula,setPelicula,sala,setSala,sillasCarrito
 }
 
 
-
 // export default App;
-
 
 export {
   App as default,
