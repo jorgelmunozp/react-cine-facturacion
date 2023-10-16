@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-cine-facturacion/static/css/main.a3275ee2.css",
+    "main.css": "/react-cine-facturacion/static/css/main.f8d4d4ad.css",
     "main.js": "/react-cine-facturacion/static/js/main.52049447.js",
     "static/js/787.841403ea.chunk.js": "/react-cine-facturacion/static/js/787.841403ea.chunk.js",
     "static/media/toystory.mp4": "/react-cine-facturacion/static/media/toystory.d4f0bb3ed146c0508672.mp4",
@@ -9,12 +9,12 @@
     "static/media/logo.png": "/react-cine-facturacion/static/media/logo.a1ac9d74d51c9d77ab38.png",
     "static/media/fondo.jpg": "/react-cine-facturacion/static/media/fondo.6dad02f41ad04fbca46a.jpg",
     "index.html": "/react-cine-facturacion/index.html",
-    "main.a3275ee2.css.map": "/react-cine-facturacion/static/css/main.a3275ee2.css.map",
+    "main.f8d4d4ad.css.map": "/react-cine-facturacion/static/css/main.f8d4d4ad.css.map",
     "main.52049447.js.map": "/react-cine-facturacion/static/js/main.52049447.js.map",
     "787.841403ea.chunk.js.map": "/react-cine-facturacion/static/js/787.841403ea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3275ee2.css",
+    "static/css/main.f8d4d4ad.css",
     "static/js/main.52049447.js"
   ]
 }
