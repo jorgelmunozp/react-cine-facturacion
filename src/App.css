@@ -430,7 +430,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .CRUD-imagen {                     /*** Imagenes cartelera películas ***/
-    width: 9vw;
+    width: 8vw;
     vertical-align: middle;
   }
   .CRUD-boton-upload-img {
@@ -444,24 +444,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   input[type='text']:disabled {
     font-size: 4vmin;
   }
-  input[type='time'] {
-    height: 100%;
-    font: inherit;
-    font-size: inherit;
-    font-weight: 600;
-    padding-left: 1vw;
-    padding-top: 0.25vh;
-    padding-bottom: 0.25vh;
-  }
   input[type="time"]::-webkit-calendar-picker-indicator {
     height: 2.1vh;
-
-    font-size: larger;
-  }
-
-  .botonCrud {
-    padding: 1vh 2vw 1vh 2vw;
-    font-size: 3vmin;;
-    width: 100%;
   }
 }
