@@ -125,6 +125,9 @@
 .tableContent {
   width: 100%;
 }
+.imageCell {
+  /* display: flex; */
+}
 /********** Home.js **********/
 .divTrailer {
   
@@ -272,10 +275,12 @@ input[type='checkbox']:checked::after  {
 /********** Admin.js **********/
 .divCRUD {
   width: 100%;
+  min-height: 45vh;
   display: inline-flex;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid var(--main-color);
+  font-size: 4vmin;
 }
 .divCRUD th {
   border: 1px solid var(--main-color);
@@ -283,18 +288,20 @@ input[type='checkbox']:checked::after  {
   color: var(--white-color);
 }
 .CRUD-imagen {                     /*** Imagenes cartelera películas ***/
-  width: 3.7vw;
+  width: 4vw;
+  height: 7vh;
   border: 1px solid #000;
   pointer-events: none;
   user-select: none;
   vertical-align: middle;
+  padding: 0vh 1vw 0vh 1vw;
 }
 .CRUD-boton-upload-img {
   color: var(--white-color);
   text-shadow: var(--text-shadow);
   background-color: var(--main-background-color);
-  padding: 0.7vh 2vw 0.7vh 2vw;
-  font-size: 3vmin;
+  padding: 0.7vh 3.5vw 0.7vh 3.5vw;
+  font-size: inherit;
   width: 100%;
   vertical-align: middle;
   cursor: pointer;
@@ -306,7 +313,7 @@ input[type='text'] {
   font: inherit;
   font-size: inherit;
   font-weight: 600;
-  padding: 1vh 0 1vh 5px;
+  padding: 0.7vh 0 0.7vh 5px;
   background-color: var(--white-color);
   color: var(--main-color);
 }
@@ -346,7 +353,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: var(--lightgray-color);
   color: var(--white-color);
 }
-
 .botonCrud {
   color: var(--white-color);
   text-shadow: var(--text-shadow);
@@ -430,25 +436,24 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
   /********** Admin.js **********/
   .divCRUD {
-    display: inline-flex;
+    display: flex;
+    /* align-items: center; */
   }
-
   .CRUD-imagen {                     /*** Imagenes cartelera películas ***/
     width: 8vw;
-    vertical-align: middle;
+    height: 5vh;
+    margin-top: 3vh;
   }
   .CRUD-boton-upload-img {
-    padding: 1vh 2vw 1vh 2vw;
-    font-size: 3vmin;
-    vertical-align: middle;
+    font-size: 3.5vmin;
   }
   input[type='text'] {
-    font-size: inherit;
+    font-size: 3.5vmin;
   }
   input[type='text']:disabled {
     font-size: 4vmin;
   }
   input[type="time"]::-webkit-calendar-picker-indicator {
-    height: 2.1vh;
+    height: 2.5vh;
   }
 }

@@ -2,7 +2,7 @@ import logo from './logo.png';
 import React, { useState, useEffect, Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faClock, faListUl, faPencilAlt, faStore, faTrashAlt, faUserEdit, faVideo, faFilm, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
+import { faCheck, faClock, faListUl, faPencilAlt, faStore, faTrashAlt, faUserEdit, faVideo, faFilm, faCloudUploadAlt, faUpload } from '@fortawesome/fontawesome-free-solid';
 
 import swalert from '@sweetalert/with-react';
 
@@ -16,6 +16,7 @@ const Admin = ({peliculas,setPeliculas}) => {
                         <tr>
                             <th style={{'width':'8vw'}}>{<FontAwesomeIcon icon={faStore} className='App-icono2'/>} </th>
                             <th>{<FontAwesomeIcon icon={faVideo} className='App-icono2'/>} </th>
+                            <th>{<FontAwesomeIcon icon={faUpload} className='App-icono2'/>} </th>
                             <th>{<FontAwesomeIcon icon={faFilm} className='App-icono2'/>} </th>
                             <th>{<FontAwesomeIcon icon={faClock} className='App-icono2'/>} </th>
                             <th colSpan={2}  style={{'width':'12vw'}}>{<FontAwesomeIcon icon={faUserEdit} className='App-icono2'/>} </th>
@@ -25,8 +26,8 @@ const Admin = ({peliculas,setPeliculas}) => {
                         {peliculas.map((item,id) => (
                             <tr>
                                 <td><input id={'sala'+id} type='text' value={peliculas[id][1]} autoComplete='off' disabled/> </td>
-                                <td><img src={peliculas[id][3]} className='CRUD-imagen' alt=' '/>&nbsp;
-                                    <label htmlFor={'myfile'+id} className='CRUD-boton-upload-img'><FontAwesomeIcon icon={faCloudUploadAlt} className='App-icono2'/></label>
+                                <td className='imageCell'><img src={peliculas[id][3]} className='CRUD-imagen' alt=' '/>&nbsp;</td>
+                                <td><label htmlFor={'myfile'+id} className='CRUD-boton-upload-img'><FontAwesomeIcon icon={faCloudUploadAlt} className='App-icono2'/></label>
                                     <input type='file' id={'myfile'+id} name="myfile" style={{'display':'none'}}></input> </td>
                                 <td><input id={'pelicula'+id} type='text' defaultValue={peliculas[id][0]} autoComplete='off'/> </td>
                                 <td><input id={'hora'+id} type='time' defaultValue={peliculas[id][2]} autoComplete='off' /> </td>
@@ -35,7 +36,7 @@ const Admin = ({peliculas,setPeliculas}) => {
                             </tr>
                         ))}
                         <tr>
-                            <td colSpan={3}><button className='botonCrud' onClick={()=>actualizarTodo(peliculas,setPeliculas)}>{<FontAwesomeIcon icon={faPencilAlt} className='App-icono2'/>}{<FontAwesomeIcon icon={faListUl} className='App-icono2'/>}</button></td>
+                            <td colSpan={4}><button className='botonCrud' onClick={()=>actualizarTodo(peliculas,setPeliculas)}>{<FontAwesomeIcon icon={faPencilAlt} className='App-icono2'/>}{<FontAwesomeIcon icon={faListUl} className='App-icono2'/>}</button></td>
                             <td colSpan={3}><button className='botonCrud' onClick={()=>borrarTodo(peliculas,setPeliculas)}>{<FontAwesomeIcon icon={faTrashAlt} className='App-icono2'/>}{<FontAwesomeIcon icon={faListUl} className='App-icono2'/>}</button></td>
                         </tr>
                     </tbody>
